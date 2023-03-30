@@ -13,7 +13,11 @@ public class TarifasPorValoresService implements ITarifasPorValoresService{
 	@Autowired
 	private TarifasPorValoresRepository tarifasRepo;
 	
-	public List<TarifasPorValores> buscarTarifasServicoEGrupo(String CodigoGrupo, String CodigoServico){
-		return tarifasRepo.buscarTarifasServicoEGrupo(CodigoGrupo, CodigoServico);
+	public List<TarifasPorValores> buscarMaioresTarifas(String CodigoGrupo, String CodigoServico){
+		return tarifasRepo.buscarMaioresTarifas(CodigoGrupo, CodigoServico);
+	}
+	
+	public List<TarifasPorValores> buscarMenoresTarifas(String CodigoGrupo, String CodigoServico){
+		return tarifasRepo.buscarMenoresTarifas(CodigoGrupo, CodigoServico);
 	}
 }
