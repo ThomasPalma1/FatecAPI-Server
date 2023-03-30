@@ -21,8 +21,9 @@ public class ServicosBancarios {
 	@Column(name ="nome")
 	private String nome;
 	
-	public ServicosBancarios() {
-		
+	public ServicosBancarios(String codigo, String nome) {
+		this.codigo = codigo;
+		this.nome = nome;
 	}
 	
 	public Long getId() {

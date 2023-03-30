@@ -21,8 +21,9 @@ public class GruposConsolidados {
 	@Column(name ="nome")
 	private String nome;
 	
-	public GruposConsolidados() {
-		
+	public GruposConsolidados(String codigo, String nome) {
+		this.codigo = codigo;
+		this.nome = nome;
 	}
 	
 	public Long getId() {
