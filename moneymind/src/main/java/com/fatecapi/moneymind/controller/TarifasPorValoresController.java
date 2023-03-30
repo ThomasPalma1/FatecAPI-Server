@@ -14,15 +14,19 @@ import com.fatecapi.moneymind.service.TarifasPorValoresService;
 
 @RestController
 @CrossOrigin
-@RequestMapping(value="/tarifasvalores")
+@RequestMapping(value="/tarifasValores")
 public class TarifasPorValoresController {
 
 	@Autowired
 	private TarifasPorValoresService service;
 	
-	@GetMapping("/my-entities")
-	public List<TarifasPorValores> TarifasServicoEGrupo(@RequestParam("grupo") String grupo, @RequestParam("servico") String servico){
-		return service.buscarTarifasServicoEGrupo(grupo, servico);
+	@GetMapping("/bancosMaioresTarifas")
+	public List<TarifasPorValores> buscarMaioresTarifas(@RequestParam("grupo") String grupo, @RequestParam("servico") String servico){
+		return service.buscarMaioresTarifas(grupo, servico);
+	}
+	@GetMapping("/bancosMenoresTarifas")
+	public List<TarifasPorValores> buscarMenoresTarifas(@RequestParam("grupo") String grupo, @RequestParam("servico") String servico){
+		return service.buscarMenoresTarifas(grupo, servico);
 	}
 	
 }
