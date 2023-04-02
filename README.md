@@ -8,24 +8,17 @@ There are many IDEs available in the market today, however, we recommend using E
 
 ## Project Setup
 
+### Configure environment variable:
+
 ```sh
-npm install
+MDB = "jdbc:mariadb://localhost:3306/money_mind?useTimezone=true&serverTimezone=UTC"
+DB_PASSWORD = "password"
+DB_USERNAME = "username"
 ```
 
-### Compile and Hot-Reload for Development
+
+### Automatically Compile and Reload for Development:
 
 ```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+Launch the application via eclipse start or mvn spring-boot:run
 ```
