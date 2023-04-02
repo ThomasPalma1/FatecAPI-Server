@@ -4,8 +4,7 @@ This repository contains the codes for the server-side part of the application, 
 
 ## Recommended IDE Setup
 
-There are many IDEs available in the market today, however we recommend utilizing Visual Studio Code coupled with Volar for better experience.
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+There are many IDEs available in the market today, however, we recommend using Eclipse IDE or IntelliJ IDEA for a better experience.
 
 ## Project Setup
 
