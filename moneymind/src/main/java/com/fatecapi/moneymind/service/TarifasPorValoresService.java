@@ -20,4 +20,8 @@ public class TarifasPorValoresService implements ITarifasPorValoresService{
 	public List<TarifasPorValores> buscarMenoresTarifas(String CodigoGrupo, String CodigoServico){
 		return tarifasRepo.buscarMenoresTarifas(CodigoGrupo, CodigoServico);
 	}
+
+	public List<TarifasPorValores> buscarTodasTarifas(){
+		return tarifasRepo.findAll();
+	}
 }
