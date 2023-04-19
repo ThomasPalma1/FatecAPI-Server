@@ -8,20 +8,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "lista_tarifas_instituicao")
+@Table(name = "lista_tarifas_instituicoes")
 public class TarifasPorInstituicao {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="id")
 	private Long id;
 	
-	@Column(name="servico")
+	@Column(name="codigo_servico")
 	private String servico;
 	
-	@Column(name = "nomeServico")
+	@Column(name = "servico")
 	private String nomeServico;
 	
-	@Column(name="tipoPessoa")
+	@Column(name="pessoa")
 	private String tipoPessoa;
 	
 	@Column(name="cnpj")
@@ -30,13 +30,13 @@ public class TarifasPorInstituicao {
 	@Column(name="unidade")
 	private String unidade;
 	
-	@Column(name="dataVigencia")
+	@Column(name="data_vigencia")
 	private String dataVigencia;
 	
-	@Column(name="valorMaximo")
+	@Column(name="valor_maximo")
 	private Float valorMaximo;
 	
-	@Column(name="tipoValor")
+	@Column(name="tipo_valor")
 	private String tipoValor;
 	
 	@Column(name="periodicidade")

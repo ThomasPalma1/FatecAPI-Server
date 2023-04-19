@@ -22,7 +22,7 @@ public class TarifasPorValores {
 	private String razao_social;
 	
 	@Column(name="valor_maximo")
-	private String valor_maximo;
+	private Float valor_maximo;
 	
 	@Column(name="periodicidade")
 	private String periodicidade;
@@ -62,11 +62,11 @@ public class TarifasPorValores {
 		this.razao_social = razao_social;
 	}
 
-	public String getValor_maximo() {
+	public Float getValor_maximo() {
 		return valor_maximo;
 	}
 
-	public void setValor_maximo(String valor_maximo) {
+	public void setValor_maximo(Float valor_maximo) {
 		this.valor_maximo = valor_maximo;
 	}
 
