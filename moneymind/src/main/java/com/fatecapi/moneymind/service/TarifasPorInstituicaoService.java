@@ -22,4 +22,16 @@ public class TarifasPorInstituicaoService implements ITarifasPorInstituicaoServi
 	public List<TarifasPorInstituicao> listarTodos() {
 		return tarifasRepo.findAll();
 	}
+
+	@Override
+	public List<TarifasPorInstituicao> compararTarifas(Integer cnpj1, Integer cnpj2, String servico,
+			String tipoPessoa) {
+
+		return tarifasRepo.compararTarifas(cnpj1, cnpj2, servico, tipoPessoa);
+	}
+
+	@Override
+	public List<TarifasPorInstituicao> obterMenorTarifa(String servico, String tipoPessoa) {
+		return tarifasRepo.obterMenorTarifa(servico, tipoPessoa);
+	}
 }
