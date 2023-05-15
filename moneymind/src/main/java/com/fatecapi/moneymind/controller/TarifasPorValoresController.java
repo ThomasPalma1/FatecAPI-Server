@@ -19,6 +19,11 @@ public class TarifasPorValoresController {
 
 	@Autowired
 	private TarifasPorValoresService service;
+
+	@GetMapping
+	public List<TarifasPorValores> buscarTodasTarifas() {
+		return service.buscarTodasTarifas();
+	}
 	
 	@GetMapping("/bancosMaioresTarifas")
 	public List<TarifasPorValores> buscarMaioresTarifas(@RequestParam("grupo") String grupo, @RequestParam("servico") String servico){
