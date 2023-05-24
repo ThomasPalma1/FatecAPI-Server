@@ -17,12 +17,19 @@ public class Instituicoes {
     @Column(name = "cnpj")
     private Integer cnpj;
 
-    @Column(name = "codigoGrupo")
+    @Column(name="codigoGrupo")
     private Integer codigoGrupo;
+    
+    public Instituicoes() {
+    	
+	}
+    public Integer getCodigoGrupo() {
+		return codigoGrupo;
+	}
 
-    public Instituicoes(){
-
-    }
+	public void setCodigoGrupo(Integer codigoGrupo) {
+		this.codigoGrupo = codigoGrupo;
+	}
 
     public Long getId() {
         return id;
@@ -48,11 +55,4 @@ public class Instituicoes {
         this.cnpj = cnpj;
     }
 
-    public Integer getCodigoGrupo() {
-        return codigoGrupo;
-    }
-
-    public void setCodigoGrupo(Integer codigoGrupo) {
-        this.codigoGrupo = codigoGrupo;
-    }
 }

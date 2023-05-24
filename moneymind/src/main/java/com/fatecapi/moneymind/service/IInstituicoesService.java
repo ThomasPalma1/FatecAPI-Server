@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface IInstituicoesService {
 
+	public List<Instituicoes> buscarPorCnpj(Integer cnpj);
     public List<Instituicoes> buscarTodasInstituicoes();
 }

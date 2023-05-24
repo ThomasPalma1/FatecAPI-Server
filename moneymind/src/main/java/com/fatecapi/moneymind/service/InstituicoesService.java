@@ -16,4 +16,8 @@ public class InstituicoesService implements IInstituicoesService{
     public List<Instituicoes> buscarTodasInstituicoes(){
         return instituicoesRepo.findAll();
     }
+
+	public List<Instituicoes> buscarPorCnpj(Integer cnpj) {
+		return instituicoesRepo.buscarPorCnpj(cnpj);
+	}
 }
