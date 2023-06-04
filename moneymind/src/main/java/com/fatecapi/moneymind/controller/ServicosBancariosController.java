@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fatecapi.moneymind.entity.ServicosBancarios;
 import com.fatecapi.moneymind.service.IServicosBancariosService;
+import com.fatecapi.moneymind.service.LogService;
 
 @RestController
 @CrossOrigin
@@ -17,9 +18,12 @@ import com.fatecapi.moneymind.service.IServicosBancariosService;
 public class ServicosBancariosController {
 	@Autowired
 	private IServicosBancariosService service;
+    @Autowired
+    private LogService logService;
 	
 	@GetMapping
 	public List<ServicosBancarios> buscarTodosServicos(){
+    	logService.log("GET", "/servicos", "Busca por todos os serviços");
 		return service.buscarTodosServicos();
 	}
 }

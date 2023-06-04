@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fatecapi.moneymind.entity.GruposConsolidados;
 import com.fatecapi.moneymind.service.IGruposConsolidadosService;
+import com.fatecapi.moneymind.service.LogService;
 
 @RestController
 @CrossOrigin
@@ -17,9 +18,12 @@ import com.fatecapi.moneymind.service.IGruposConsolidadosService;
 public class GruposConsolidadosController {
 	@Autowired
 	private IGruposConsolidadosService service;
-	
+    @Autowired
+    private LogService logService;
+    
 	@GetMapping
 	public List<GruposConsolidados> buscarTodosGrupos() {
+    	logService.log("GET", "/grupos", "Busca por todos os grupos");
 		return service.buscarTodosGrupos();
 	}
 }
